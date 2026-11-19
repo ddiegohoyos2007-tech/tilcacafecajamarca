@@ -1,0 +1,7 @@
+[
+  {"check": "street-number", "target": "dl.mt-8.grid", "reason": "El brief del cliente pide usar su dirección real (Av. La Cantuta 1156) tal cual; es el dato que la gente necesita para llegar."},
+  {"check": "street-number", "target": "a.enlace.font-display", "reason": "Dirección real dada por el cliente en el brief; el momento tipográfico de la visita es justamente la calle."},
+  {"check": "phone-number", "target": "li.border-b:nth-of-type(1)", "reason": "El brief pide el WhatsApp real del negocio (+51 997 677 331); la reserva funciona solo con ese número."},
+  {"check": "phone-number", "target": "li.border-b:nth-of-type(2)", "reason": "El brief pide el teléfono real para llamar; es el mismo número del WhatsApp del cliente."},
+  {"check": "moment-none", "target": "(the page)", "reason": "Los momentos repartidos (picture-develops, photo-chapters) necesitan fotos grandes; las del cliente son recortes de 240px. El brief define su propio momento: las seis tazas y la balanza en #sexto-cafe."}
+]

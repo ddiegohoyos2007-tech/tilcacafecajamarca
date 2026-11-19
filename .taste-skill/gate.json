@@ -1,0 +1,2052 @@
+{
+ "start": "2026-11-19T23:21:29.914Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-19T23:35:18.603Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 86,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-19T23:40:31.249Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 59,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-19T23:43:32.761Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 52,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "dist/index.html",
+  "dir": "/home/user/tilcacafecajamarca",
+  "kind": "place",
+  "start": "2026-11-19T23:21:29.914Z",
+  "by": "start.mjs",
+  "url": null,
+  "root": "dist",
+  "category": "café de especialidad",
+  "primary": "Reservar mesa"
+ },
+ "manual": true,
+ "roundKey": "1d3dafc80cc791e1:e37d1a06",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "1d3dafc80cc791e1",
+ "page": "dist/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "no-visual",
+    "where": "section#carta \"Café, jugos, sándwiches y postres\"",
+    "msg": "pictures, effects and mocks cover 14% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#carta \"Café, jugos, sándwiches y postres\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#visitanos \"Visítanos\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#visitanos \"Visítanos\""
+    ]
+   },
+   {
+    "check": "card-family",
+    "where": "section#visitanos > div.wrap > div.mt-16.grid > div:nth-of-type(1) \"HORARIO\"",
+    "msg": "5 cards of one kind (.md:col-span-5) set their titles in 2 faces: dm sans (1, like \"HORARIO\"), fraunces (2, like \"“Hazlo todo con amor”\")",
+    "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-family"
+    ],
+    "wheres": [
+     "section#visitanos > div.wrap > div.mt-16.grid > div:nth-of-type(1) \"HORARIO\""
+    ]
+   },
+   {
+    "check": "card-family",
+    "where": "section#talleres > div.wrap > div.mt-12.grid > article.flex.flex-col \"“Hazlo todo con amor”\"",
+    "msg": "3 cards of one kind (.flex-col) set their titles in 2 faces: fraunces (1, like \"“Hazlo todo con amor”\"), dm sans (1, like \"OFRECEMOS\")",
+    "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-family"
+    ],
+    "wheres": [
+     "section#talleres > div.wrap > div.mt-12.grid > article.flex.flex-col \"“Hazlo todo con amor”\""
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "h2#talleres-titulo \"Talleres de arte y bienestar\"",
+    "msg": "\"Talleres de arte y bienestar\" names no product, part, place or section (8 headings like it; at most one brand line per page) (and 7 more like it: \"TALLERES ANTERIORES\", \"Separa tu mesa para lo q\", \"Así se ve un día en Tilc\", \"Únete al equipo: buscamo\", ...)",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "h2#talleres-titulo \"Talleres de arte y bienestar\""
+    ]
+   },
+   {
+    "check": "top-stagger",
+    "where": "section#galeria > div.wrap > ul.mt-12.columns-2",
+    "msg": "3 boxes side by side start at different heights (+29, +85, +0px)",
+    "fix": "align the tops of the boxes in the row (one floor, one ceiling)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "top-stagger"
+    ],
+    "wheres": [
+     "section#galeria > div.wrap > ul.mt-12.columns-2"
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(3) > span.rotate-45.bg-oro",
+    "msg": "left edge at 1053px, 15px off a common edge of its section at 1038px (3 elements, like h4.font-display.leading-tight); 2 more in this section off the grid too (li.flex.items-center:nth-of-type(1) at 746px, li.flex.items-center:nth-of-type(4) at 746px)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(3) > span.rotate-45.bg-oro"
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div.wrap.grid > div:nth-of-type(1) > ul.mt-3.grid > li.flex.gap-3:nth-of-type(1) \"Conocimientos básicos de barismo y prepa\"",
+    "msg": "left edge at 138px, 18px off the page margin at 120px (54 elements, like span.shrink-0.rotate-45); 4 more in this section off the grid too (li.flex.gap-3:nth-of-type(2) at 138px, li.flex.gap-3:nth-of-type(3) at 138px, li.flex.gap-3:nth-of-type(4) at 138px, li.flex.gap-3:nth-of-type(5) at 138px)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div.wrap.grid > div:nth-of-type(1) > ul.mt-3.grid > li.flex.gap-3:nth-of-type(1) \"Conocimientos básicos de barismo y prepa\""
+    ]
+   },
+   {
+    "check": "street-number",
+    "where": "div:nth-of-type(1) > dl.mt-6.grid > div.hidden.items-start > dd \"Av. La Cantuta 1156\"",
+    "msg": "a street with its house number: \"Av. La Cantuta 1156\"; a real door, which the brief does not give (and 3 more like it: section#visitanos > div.wrap > div:nth-of-type(1) > p.mt-6, footer.sobre-bosque.bg-bosque > div.wrap > div.flex.flex-col:nth-of-type(1) > address.not-italic, head <meta description>)",
+    "fix": "print the street and the district only (\"Weserstraße, Berlin-Neukölln\"): no house number, unless the brief gives the address",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "street-number"
+    ],
+    "wheres": [
+     "div:nth-of-type(1) > dl.mt-6.grid > div.hidden.items-start > dd \"Av. La Cantuta 1156\""
+    ]
+   },
+   {
+    "check": "street-number",
+    "where": "dl.mt-6.grid > div.hidden.items-start > dd > a.enlace \"Avenida La Cantuta 1156\"",
+    "msg": "a street with its house number, in a link (www.google.com): \"Avenida La Cantuta 1156\"; a real door, which the brief does not give (and 4 more like it: div.wrap > div:nth-of-type(1) > p.mt-6 > a.enlace.font-display, div.wrap > div.mt-16.grid > div:nth-of-type(1) > a.btn.btn-primario, div.wrap > div.flex.flex-col:nth-of-type(1) > address.not-italic > a.enlace, ...)",
+    "fix": "print the street and the district only (\"Weserstraße, Berlin-Neukölln\"): no house number, unless the brief gives the address",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "street-number"
+    ],
+    "wheres": [
+     "dl.mt-6.grid > div.hidden.items-start > dd > a.enlace \"Avenida La Cantuta 1156\""
+    ]
+   },
+   {
+    "check": "street-number",
+    "where": "script[type=\"application/ld+json\"] \"Av. La Cantuta 1156, Qhapaq Ñan\"",
+    "msg": "a streetAddress with a house number in the JSON-LD: \"Av. La Cantuta 1156, Qhapaq Ñan\"; a real door, which the brief does not give",
+    "fix": "print the street and the district only (\"Weserstraße, Berlin-Neukölln\"): no house number, unless the brief gives the address",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "street-number"
+    ],
+    "wheres": [
+     "script[type=\"application/ld+json\"] \"Av. La Cantuta 1156, Qhapaq Ñan\""
+    ]
+   },
+   {
+    "check": "phone-number",
+    "where": "div:nth-of-type(2) > ul.mt-4 > li.border-b:nth-of-type(1) > a.flex.items-center \"997 677 331\"",
+    "msg": "a phone number after its label: \"997 677 331\"; a visitor can dial it and reach a stranger (and 2 more like it: div:nth-of-type(2) > ul.mt-4 > li.border-b:nth-of-type(2) > a.flex.items-center, div#menu-movil > nav.wrap.flex > div.mt-auto.flex > a.btn.btn-secundario)",
+    "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "phone-number"
+    ],
+    "wheres": [
+     "div:nth-of-type(2) > ul.mt-4 > li.border-b:nth-of-type(1) > a.flex.items-center \"997 677 331\""
+    ]
+   },
+   {
+    "check": "phone-number",
+    "where": "header.fixed.inset-x-0 > div.wrap.flex > div.flex.items-center > a.btn.btn-primario \"https://wa.me/51997677331?text=Hola%20Ti\"",
+    "msg": "a WhatsApp link calls a number in a real dialable format: \"https://wa.me/51997677331?text=Hola%20Ti\"; a visitor can dial it and reach a stranger (and 12 more like it: div#hero-acciones > a.btn.btn-primario, div.wrap > div.grid.gap-4 > div > a.enlace.mt-2, div.wrap > div.mt-12.grid > article.flex.flex-col > a.btn.btn-primario, ...)",
+    "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "phone-number"
+    ],
+    "wheres": [
+     "header.fixed.inset-x-0 > div.wrap.flex > div.flex.items-center > a.btn.btn-primario \"https://wa.me/51997677331?text=Hola%20Ti\""
+    ]
+   },
+   {
+    "check": "section-tile",
+    "where": "section#carta \"Café, jugos, sándwiches y postres\"",
+    "msg": "the section is 1026px tall (1.14 screens at 1440x900), not one screen or two: the screen one screen on from its top (scroll 1800px) shows 126px of it and 774px of the next section, its heading \"Caso cerrado: el sexto café es\" on screen",
+    "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-tile"
+    ],
+    "wheres": [
+     "section#carta \"Café, jugos, sándwiches y postres\""
+    ]
+   },
+   {
+    "check": "moment-none",
+    "where": "(the page)",
+    "msg": "a place page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+    "fix": "deal one (moments.mjs pick --page place --photo) and mount it in its own section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "moment-none"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\"",
+    "msg": "the section is 300px tall (0.3 screens), 600px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#galeria \"Así se ve un día en Tilca91 publicacione\"",
+    "msg": "the section is 1202px tall (1.3 screens), 302px over one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#galeria \"Así se ve un día en Tilca91 publicacione\"",
+     "#galeria section.seccion \"Así se ve un día en Tilca91 publ\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#talleres \"Talleres de arte y bienestarTalleres par\"",
+    "msg": "the section is 1179px tall (1.3 screens), 279px over one screen (900px): every section after the hero is one screen or two, 2px either way (and 5 more like it: \"Reuniones y celebracione\", \"Legalmente deliciosoCafé\", \"VisítanosAv. La Cantuta \") (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#talleres \"Talleres de arte y bienestarTalleres par\"",
+     "#talleres section.seccion \"Talleres de arte y bienestarTall\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#reservas \"Reuniones y celebracionesSepara tu mesa \"",
+    "msg": "the section starts at 3984px, 384px below the screen grid (4 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#reservas \"Reuniones y celebracionesSepara tu mesa \"",
+     "#reservas section.sobre-bosque.seccion \"Reuniones y celebracionesSepara \""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#sexto-cafe \"Sentencia del díaCaso cerrado: el sexto \"",
+    "msg": "the section starts at 1926px, 126px below the screen grid (2 x 900px): sections start on whole screens (and 4 more like it: \"Talleres de arte y biene\", \"TILCACaféLegalmente deli\", \"Trabaja con nosotrosÚnet\") (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#sexto-cafe \"Sentencia del díaCaso cerrado: el sexto \"",
+     "#sexto-cafe section.sobre-bosque.seccion \"Sentencia del díaCaso cerrado: e\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "main#contenido",
+    "msg": "the page is 9.2 screens long (8314px on a 900px screen): a place page runs 3 to 6 screens (over 7 FAIL) (SR-2)",
+    "fix": "keep a place page at 3 to 6 screens: merge a short block into the section above, or cut a section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "main#contenido"
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "h2#galeria-titulo \"Así se ve un día en Tilca\"",
+    "msg": "the screen at scroll 4500px (stride 5) shows 361px of section 6 and the heading of section 6 whole and the content of 2 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "h2#galeria-titulo \"Así se ve un día en Tilca\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#talleres \"Talleres de arte y bienestarTalleres par\"",
+    "msg": "the screen at scroll 3600px (stride 4) shows 316px of section 4 and the content of 2 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "section#talleres \"Talleres de arte y bienestarTalleres par\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\"",
+    "msg": "the screen at scroll 7414px (the top of section 9) shows 300px of section 9 and the content of 2 sections, over 24px each beside section 8: a screen shows one section (another may peek 8px, 24px WARN) (and 7 more like it: scroll 7200px, scroll 5400px, scroll 1800px) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div#root > header.fixed.inset-x-0 \"Saltar al contenidoTILCACaféCartaTallere\"",
+    "msg": "the nav's first box starts at 16px and its last ends at 1320px, not on its .wrap at 120-1320px (SR-6)",
+    "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div#root > header.fixed.inset-x-0 \"Saltar al contenidoTILCACaféCartaTallere\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div#root \"Saltar al contenidoTILCACaféCartaTallere\"",
+    "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div#root \"Saltar al contenidoTILCACaféCartaTallere\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#inicio \"Especialidad & Derecho · CajamarcaDonde \"",
+    "msg": "the section needs exactly one in-flow child .wrap (it has 2 in-flow children, 2 .wrap) (and 1 more like it: \"Especialidad & Derecho ·\") (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#inicio \"Especialidad & Derecho · CajamarcaDonde \""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div#root > header.fixed.inset-x-0 > a.btn.btn-primario \"Saltar al contenido\"",
+    "msg": "a box runs 16-226px, outside the container lines of the nav at 120-1320px: full width is for background layers and grounds only (SR-6)",
+    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div#root > header.fixed.inset-x-0 > a.btn.btn-primario \"Saltar al contenido\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.wrap > div.grid.gap-4 > div > p.text-cafe-suave \"Todo lo que ves aquí sale de nuestra bar\"",
+    "msg": "1 text block starts on a left line at x 934, 814px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.wrap > div.grid.gap-4 > div > p.text-cafe-suave \"Todo lo que ves aquí sale de nuestra bar\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.flex.flex-col > ul.mt-6.grid > li.flex.flex-col:nth-of-type(1) > span.tabular-nums.text-salvia \"1\"",
+    "msg": "1 text block starts on a left line at x 769, 649px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (and 2 more like it: x 511, x 150) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.flex.flex-col > ul.mt-6.grid > li.flex.flex-col:nth-of-type(1) > span.tabular-nums.text-salvia \"1\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.wrap > div:nth-of-type(1) > p.mt-6 > a.enlace.font-display \"Av. La Cantuta 1156\"",
+    "msg": "a box over half the container wide runs 120-789px, not on the container's lines at 120-1320px (SR-6)",
+    "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.wrap > div:nth-of-type(1) > p.mt-6 > a.enlace.font-display \"Av. La Cantuta 1156\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#sexto-cafe > div.wrap.grid \"Sentencia del díaCaso cerrado: el sexto \"",
+    "msg": "the two columns of the split start 532px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#sexto-cafe > div.wrap.grid \"Sentencia del díaCaso cerrado: el sexto \""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#talleres > div.wrap > div.grid.gap-4 \"Talleres de arte y bienestarTalleres par\"",
+    "msg": "the two columns of the split start 32px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#talleres > div.wrap > div.grid.gap-4 \"Talleres de arte y bienestarTalleres par\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#galeria > div.wrap > div.grid.gap-4 \"Así se ve un día en Tilca91 publicacione\"",
+    "msg": "the two columns of the split start 20px apart at the top: a split's columns are top-aligned, 8px either way (and 1 more like it: \"Café, jugos, sándwiches \") (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#galeria > div.wrap > div.grid.gap-4 \"Así se ve un día en Tilca91 publicacione\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#carta > div.wrap > div.relative.mt-8 > div.grid.gap-8 \"Grano de especialidad, leche texturizada\"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 936, the first split's at 834; its right column starts at x 936, on none of the split lines 732 (k=6) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#carta > div.wrap > div.relative.mt-8 > div.grid.gap-8 \"Grano de especialidad, leche texturizada\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#inicio > div.wrap.grid \"Especialidad & Derecho · CajamarcaDonde \"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 834, on none of the split lines 732 (k=6) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#inicio > div.wrap.grid \"Especialidad & Derecho · CajamarcaDonde \""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#carta > div.wrap > div.grid.gap-4 \"Café, jugos, sándwiches y postresTodo lo\"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 834, on none of the split lines 732 (k=6) (and 7 more like it: \"Así se ve un día en Tilc\", \"Sentencia del díaCaso ce\", \"Talleres de arte y biene\") (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#carta > div.wrap > div.grid.gap-4 \"Café, jugos, sándwiches y postresTodo lo\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#talleres \"Talleres de arte y bienestar\"",
+    "msg": "pictures, effects and mocks cover 14% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#talleres \"Talleres de arte y bienestar\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#reservas \"Separa tu mesa para lo que importa\"",
+    "msg": "pictures, effects and mocks cover 13% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#reservas \"Separa tu mesa para lo que importa\""
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.mt-12.grid > article.flex.flex-col > div.mt-6.flex > span.font-display.text-bosque:nth-of-type(1) \"21\"",
+    "msg": "the figure \"21\" is set at 40px, larger than the section headings (h2 35px)",
+    "fix": "set figures at the h2 size or under: a stat reads as data, not as the heading",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "div.mt-12.grid > article.flex.flex-col > div.mt-6.flex > span.font-display.text-bosque:nth-of-type(1) \"21\""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "section#carta > div.wrap > ul.flex.flex-wrap > li.flex.items-center:nth-of-type(2) \"Café de especialidad\"",
+    "msg": "left edge at 38px, 22px off the page margin at 16px (90 elements, like span.rotate-45.bg-oro)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "section#carta > div.wrap > ul.flex.flex-wrap > li.flex.items-center:nth-of-type(2) \"Café de especialidad\""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(2) > span.rotate-45.bg-oro",
+    "msg": "left edge at 181.5px, 21.5px off a common edge of its section at 203px (3 elements, like h4.font-display.leading-tight); 4 more in this section off the grid too (li.flex.items-center:nth-of-type(1) at 30px, li.flex.items-center:nth-of-type(2) at 197px, li.flex.items-center:nth-of-type(3) at 30px, li.flex.items-center:nth-of-type(4) at 30px)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(2) > span.rotate-45.bg-oro"
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#inicio a.btn.btn-secundario \"Ver carta\"",
+    "msg": "starts at x 335.7; the lines are 120 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#inicio a.btn.btn-secundario \"Ver carta\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "#carta section.seccion \"Legalmente deliciosoCafé de espe\"",
+    "msg": "1026px, 1.14 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "#carta section.seccion \"Legalmente deliciosoCafé de espe\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\"",
+    "msg": "919px, 1.02 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "#visitanos section.seccion \"VisítanosAv. La Cantuta 1156Qhap\"",
+    "msg": "853px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "#visitanos section.seccion \"VisítanosAv. La Cantuta 1156Qhap\""
+    ]
+   },
+   {
+    "check": "edge-right",
+    "where": "#talleres a.group.block \"10 octAmigos por siempre\"",
+    "msg": "ends at x 187; the right line is 374",
+    "fix": "end it on the .wrap right line",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-right"
+    ],
+    "wheres": [
+     "#talleres a.group.block \"10 octAmigos por siempre\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#talleres a.group.block \"25 julEl despertar de la monarca\"",
+    "msg": "starts at x 203; the lines are 16 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#talleres a.group.block \"25 julEl despertar de la monarca\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#talleres p.mt-3.text-[1rem] \"25 jul\"",
+    "msg": "starts at x 203; the lines are 16 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#talleres p.mt-3.text-[1rem] \"25 jul\""
+    ]
+   },
+   {
+    "check": "edge-right",
+    "where": "#reservas div.marco.aspect-[4/5]",
+    "msg": "ends at x 187; the right line is 374",
+    "fix": "end it on the .wrap right line",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-right"
+    ],
+    "wheres": [
+     "#reservas div.marco.aspect-[4/5]"
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#reservas div.marco.aspect-[4/5]",
+    "msg": "starts at x 203; the lines are 16 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#reservas div.marco.aspect-[4/5]"
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#carta section.seccion \"Legalmente deliciosoCafé de espe\"",
+    "msg": "framed, 75px of #sexto-cafe section.sobre-bosque.seccion \"Sentencia del díaCaso cerrado: e\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#carta section.seccion \"Legalmente deliciosoCafé de espe\""
+    ]
+   },
+   {
+    "check": "neighbour-ground",
+    "where": "#talleres section.seccion \"Talleres de arte y bienestarTall\"",
+    "msg": "framed, 71px of #reservas section.sobre-bosque.seccion \"Reuniones y celebracionesSepara \"'s ground shows",
+    "fix": "end the ground with the section",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour-ground"
+    ],
+    "wheres": [
+     "#talleres section.seccion \"Talleres de arte y bienestarTall\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\"",
+    "msg": "framed, 54px of #visitanos section.seccion \"VisítanosAv. La Cantuta 1156Qhap\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "no-visual",
+    "where": "section#inicio \"Donde el café y la justicia se encuentra\"",
+    "msg": "pictures, effects and mocks cover 24% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#talleres \"Talleres de arte y bienestar\"",
+    "msg": "pictures, effects and mocks cover 17% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#reservas \"Separa tu mesa para lo que importa\"",
+    "msg": "pictures, effects and mocks cover 19% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "div#root > header.fixed.inset-x-0 > a.btn.btn-primario \"Saltar al contenido\"",
+    "msg": "\"Saltar al contenido\" does not start with a verb (book, buy, try, start, get, see...) (and 5 more like it: \"Reservar mesa\", \"Separar mi cupo\", \"Enviar por WhatsApp\", \"Enviar mi CV por WhatsAp\", ...)",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"Reservar mesa\" does not read word for word the same in the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "right-edge",
+    "where": "div.wrap.grid > div.flex.flex-col > div.mt-8.flex > a.btn.btn-secundario \"tilcacafe@gmail.com\"",
+    "msg": "its right edge stops 9px short of the content's right edge (1320px), which div.marco reaches",
+    "fix": "end it on the content's right edge, like the other blocks of its section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#inicio / section#carta",
+    "msg": "172px between these sections, -33% against the median 257px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div:nth-of-type(2) > div.marco.w-full > picture > img \"latte-corazon.avif\"",
+    "msg": "8 photographs in more than one look: saturation from 0.17 to 0.72; the odd one out is latte-corazon.avif",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-family",
+    "where": "div#root > header.fixed.inset-x-0",
+    "msg": "the nav's links and actions use 2 type families (Fraunces, DM Sans)",
+    "fix": "keep one nav on every screen: the same bar, fill, links and type",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.enlace.inline-flex \"Carta\"",
+    "msg": "\"Carta\" opens a section headed \"Café, jugos, sándwiches y postres\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "nav.hidden > ul.flex.items-center > li:nth-of-type(3) > a.enlace.inline-flex \"Reservas\"",
+    "msg": "\"Reservas\" opens a section headed \"Separa tu mesa para lo que importa\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "nav.wrap.flex > ul.flex.flex-col > li.border-b:nth-of-type(1) > a.flex.items-center \"Carta\"",
+    "msg": "\"Carta\" opens a section headed \"Café, jugos, sándwiches y postres\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "nav.wrap.flex > ul.flex.flex-col > li.border-b:nth-of-type(3) > a.flex.items-center \"Reservas\"",
+    "msg": "\"Reservas\" opens a section headed \"Separa tu mesa para lo que importa\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "link-styles",
+    "where": "div#hero-acciones > a.btn.btn-secundario \"Ver carta\"",
+    "msg": "text links in 3 looks: no line, bold (2, like \"Ver carta\"); underline, regular (5, like \"Av. La Cantuta 1156\"); no line, regular (4, like \"WhatsApp 997 677 331\")",
+    "fix": "give text links one look wherever they sit: one underline, one weight",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "div#root > header.fixed.inset-x-0",
+    "msg": "the nav stays on screen with 5 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.fixed.inset-x-0 > div.wrap.flex:nth-of-type(1) > div.flex.items-center > a.btn.btn-primario \"reservar mesa\"",
+    "msg": "\"reservar mesa\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "assumed",
+    "where": "div:nth-of-type(1) > dl.mt-6.grid > div.flex.items-start:nth-of-type(1) > dd \"Lun–Vie 7:30 a.m. – 7:30 p.m. Sáb 9:00 a\"",
+    "msg": "2 facts marked as assumed, for the report: \"Lun–Vie 7:30 a.m. – 7:30 p.m. Sáb 9:00 a.m. – 6:00 p.m.\", \"Lunes a viernes 7:30 a.m. – 7:30 p.m. Sábado 9:00 a.m. – 6:0\"",
+    "fix": "list each assumed fact in the report for the client to confirm, or take it from the brief",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-fields",
+    "where": "section#reservas > div.wrap.grid > form.sobre-crema.rounded-md",
+    "msg": "the form has no status line (role=\"status\"): sending, sent and errors are never read out",
+    "fix": "give each field its type, autocomplete and inputmode, never block paste or disable the button before a submit, and add the status line (references/system.md, Forms)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav",
+    "where": "header.fixed.inset-x-0 > div.wrap.flex > div.flex.items-center > button.relative.inline-flex \"Abrir menú\"",
+    "msg": "the nav is lopsided: its last item ends 8px outside the content's edge (374px), while its first starts on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#carta \"Café, jugos, sándwiches y postres\"",
+    "msg": "pictures, effects and mocks cover 19% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#equipo \"Únete al equipo: buscamos barista\"",
+    "msg": "pictures, effects and mocks cover 20% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-stat-strip",
+    "msg": "stat strip x1",
+    "fix": "a strip only of figures the brief gives (a price, hours, a count); otherwise put each number in the sentence it proves, or leave it out (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy x1: \"1 / 2 / 3\"",
+    "exact": false
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 127,
+   "layout": 13
+  }
+ },
+ "open": [
+  {
+   "check": "no-visual",
+   "where": "section#carta \"Café, jugos, sándwiches y postres\"",
+   "msg": "pictures, effects and mocks cover 14% of this section; a feature section needs a visual (about 25% or more)",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#carta \"Café, jugos, sándwiches y postres\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#visitanos \"Visítanos\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#visitanos \"Visítanos\""
+   ]
+  },
+  {
+   "check": "card-family",
+   "where": "section#visitanos > div.wrap > div.mt-16.grid > div:nth-of-type(1) \"HORARIO\"",
+   "msg": "5 cards of one kind (.md:col-span-5) set their titles in 2 faces: dm sans (1, like \"HORARIO\"), fraunces (2, like \"“Hazlo todo con amor”\")",
+   "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-family"
+   ],
+   "wheres": [
+    "section#visitanos > div.wrap > div.mt-16.grid > div:nth-of-type(1) \"HORARIO\""
+   ]
+  },
+  {
+   "check": "card-family",
+   "where": "section#talleres > div.wrap > div.mt-12.grid > article.flex.flex-col \"“Hazlo todo con amor”\"",
+   "msg": "3 cards of one kind (.flex-col) set their titles in 2 faces: fraunces (1, like \"“Hazlo todo con amor”\"), dm sans (1, like \"OFRECEMOS\")",
+   "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-family"
+   ],
+   "wheres": [
+    "section#talleres > div.wrap > div.mt-12.grid > article.flex.flex-col \"“Hazlo todo con amor”\""
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "h2#talleres-titulo \"Talleres de arte y bienestar\"",
+   "msg": "\"Talleres de arte y bienestar\" names no product, part, place or section (8 headings like it; at most one brand line per page) (and 7 more like it: \"TALLERES ANTERIORES\", \"Separa tu mesa para lo q\", \"Así se ve un día en Tilc\", \"Únete al equipo: buscamo\", ...)",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "h2#talleres-titulo \"Talleres de arte y bienestar\""
+   ]
+  },
+  {
+   "check": "top-stagger",
+   "where": "section#galeria > div.wrap > ul.mt-12.columns-2",
+   "msg": "3 boxes side by side start at different heights (+29, +85, +0px)",
+   "fix": "align the tops of the boxes in the row (one floor, one ceiling)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "top-stagger"
+   ],
+   "wheres": [
+    "section#galeria > div.wrap > ul.mt-12.columns-2"
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(3) > span.rotate-45.bg-oro",
+   "msg": "left edge at 1053px, 15px off a common edge of its section at 1038px (3 elements, like h4.font-display.leading-tight); 2 more in this section off the grid too (li.flex.items-center:nth-of-type(1) at 746px, li.flex.items-center:nth-of-type(4) at 746px)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(3) > span.rotate-45.bg-oro"
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div.wrap.grid > div:nth-of-type(1) > ul.mt-3.grid > li.flex.gap-3:nth-of-type(1) \"Conocimientos básicos de barismo y prepa\"",
+   "msg": "left edge at 138px, 18px off the page margin at 120px (54 elements, like span.shrink-0.rotate-45); 4 more in this section off the grid too (li.flex.gap-3:nth-of-type(2) at 138px, li.flex.gap-3:nth-of-type(3) at 138px, li.flex.gap-3:nth-of-type(4) at 138px, li.flex.gap-3:nth-of-type(5) at 138px)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div.wrap.grid > div:nth-of-type(1) > ul.mt-3.grid > li.flex.gap-3:nth-of-type(1) \"Conocimientos básicos de barismo y prepa\""
+   ]
+  },
+  {
+   "check": "street-number",
+   "where": "div:nth-of-type(1) > dl.mt-6.grid > div.hidden.items-start > dd \"Av. La Cantuta 1156\"",
+   "msg": "a street with its house number: \"Av. La Cantuta 1156\"; a real door, which the brief does not give (and 3 more like it: section#visitanos > div.wrap > div:nth-of-type(1) > p.mt-6, footer.sobre-bosque.bg-bosque > div.wrap > div.flex.flex-col:nth-of-type(1) > address.not-italic, head <meta description>)",
+   "fix": "print the street and the district only (\"Weserstraße, Berlin-Neukölln\"): no house number, unless the brief gives the address",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "street-number"
+   ],
+   "wheres": [
+    "div:nth-of-type(1) > dl.mt-6.grid > div.hidden.items-start > dd \"Av. La Cantuta 1156\""
+   ]
+  },
+  {
+   "check": "street-number",
+   "where": "dl.mt-6.grid > div.hidden.items-start > dd > a.enlace \"Avenida La Cantuta 1156\"",
+   "msg": "a street with its house number, in a link (www.google.com): \"Avenida La Cantuta 1156\"; a real door, which the brief does not give (and 4 more like it: div.wrap > div:nth-of-type(1) > p.mt-6 > a.enlace.font-display, div.wrap > div.mt-16.grid > div:nth-of-type(1) > a.btn.btn-primario, div.wrap > div.flex.flex-col:nth-of-type(1) > address.not-italic > a.enlace, ...)",
+   "fix": "print the street and the district only (\"Weserstraße, Berlin-Neukölln\"): no house number, unless the brief gives the address",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "street-number"
+   ],
+   "wheres": [
+    "dl.mt-6.grid > div.hidden.items-start > dd > a.enlace \"Avenida La Cantuta 1156\""
+   ]
+  },
+  {
+   "check": "street-number",
+   "where": "script[type=\"application/ld+json\"] \"Av. La Cantuta 1156, Qhapaq Ñan\"",
+   "msg": "a streetAddress with a house number in the JSON-LD: \"Av. La Cantuta 1156, Qhapaq Ñan\"; a real door, which the brief does not give",
+   "fix": "print the street and the district only (\"Weserstraße, Berlin-Neukölln\"): no house number, unless the brief gives the address",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "street-number"
+   ],
+   "wheres": [
+    "script[type=\"application/ld+json\"] \"Av. La Cantuta 1156, Qhapaq Ñan\""
+   ]
+  },
+  {
+   "check": "phone-number",
+   "where": "header.fixed.inset-x-0 > div.wrap.flex > div.flex.items-center > a.btn.btn-primario \"https://wa.me/51997677331?text=Hola%20Ti\"",
+   "msg": "a WhatsApp link calls a number in a real dialable format: \"https://wa.me/51997677331?text=Hola%20Ti\"; a visitor can dial it and reach a stranger (and 12 more like it: div#hero-acciones > a.btn.btn-primario, div.wrap > div.grid.gap-4 > div > a.enlace.mt-2, div.wrap > div.mt-12.grid > article.flex.flex-col > a.btn.btn-primario, ...)",
+   "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "phone-number"
+   ],
+   "wheres": [
+    "header.fixed.inset-x-0 > div.wrap.flex > div.flex.items-center > a.btn.btn-primario \"https://wa.me/51997677331?text=Hola%20Ti\""
+   ]
+  },
+  {
+   "check": "section-tile",
+   "where": "section#carta \"Café, jugos, sándwiches y postres\"",
+   "msg": "the section is 1026px tall (1.14 screens at 1440x900), not one screen or two: the screen one screen on from its top (scroll 1800px) shows 126px of it and 774px of the next section, its heading \"Caso cerrado: el sexto café es\" on screen",
+   "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-tile"
+   ],
+   "wheres": [
+    "section#carta \"Café, jugos, sándwiches y postres\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\"",
+   "msg": "the section is 300px tall (0.3 screens), 600px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#galeria \"Así se ve un día en Tilca91 publicacione\"",
+   "msg": "the section is 1202px tall (1.3 screens), 302px over one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#galeria \"Así se ve un día en Tilca91 publicacione\"",
+    "#galeria section.seccion \"Así se ve un día en Tilca91 publ\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#talleres \"Talleres de arte y bienestarTalleres par\"",
+   "msg": "the section is 1179px tall (1.3 screens), 279px over one screen (900px): every section after the hero is one screen or two, 2px either way (and 5 more like it: \"Reuniones y celebracione\", \"Legalmente deliciosoCafé\", \"VisítanosAv. La Cantuta \") (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#talleres \"Talleres de arte y bienestarTalleres par\"",
+    "#talleres section.seccion \"Talleres de arte y bienestarTall\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#reservas \"Reuniones y celebracionesSepara tu mesa \"",
+   "msg": "the section starts at 3984px, 384px below the screen grid (4 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#reservas \"Reuniones y celebracionesSepara tu mesa \"",
+    "#reservas section.sobre-bosque.seccion \"Reuniones y celebracionesSepara \""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#sexto-cafe \"Sentencia del díaCaso cerrado: el sexto \"",
+   "msg": "the section starts at 1926px, 126px below the screen grid (2 x 900px): sections start on whole screens (and 4 more like it: \"Talleres de arte y biene\", \"TILCACaféLegalmente deli\", \"Trabaja con nosotrosÚnet\") (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#sexto-cafe \"Sentencia del díaCaso cerrado: el sexto \"",
+    "#sexto-cafe section.sobre-bosque.seccion \"Sentencia del díaCaso cerrado: e\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "main#contenido",
+   "msg": "the page is 9.2 screens long (8314px on a 900px screen): a place page runs 3 to 6 screens (over 7 FAIL) (SR-2)",
+   "fix": "keep a place page at 3 to 6 screens: merge a short block into the section above, or cut a section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "main#contenido"
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "h2#galeria-titulo \"Así se ve un día en Tilca\"",
+   "msg": "the screen at scroll 4500px (stride 5) shows 361px of section 6 and the heading of section 6 whole and the content of 2 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "h2#galeria-titulo \"Así se ve un día en Tilca\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#talleres \"Talleres de arte y bienestarTalleres par\"",
+   "msg": "the screen at scroll 3600px (stride 4) shows 316px of section 4 and the content of 2 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "section#talleres \"Talleres de arte y bienestarTalleres par\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\"",
+   "msg": "the screen at scroll 7414px (the top of section 9) shows 300px of section 9 and the content of 2 sections, over 24px each beside section 8: a screen shows one section (another may peek 8px, 24px WARN) (and 7 more like it: scroll 7200px, scroll 5400px, scroll 1800px) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "div#root > footer.sobre-bosque.bg-bosque \"TILCACaféLegalmente deliciosoCartaTaller\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div#root > header.fixed.inset-x-0 \"Saltar al contenidoTILCACaféCartaTallere\"",
+   "msg": "the nav's first box starts at 16px and its last ends at 1320px, not on its .wrap at 120-1320px (SR-6)",
+   "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div#root > header.fixed.inset-x-0 \"Saltar al contenidoTILCACaféCartaTallere\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div#root \"Saltar al contenidoTILCACaféCartaTallere\"",
+   "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div#root \"Saltar al contenidoTILCACaféCartaTallere\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#inicio \"Especialidad & Derecho · CajamarcaDonde \"",
+   "msg": "the section needs exactly one in-flow child .wrap (it has 2 in-flow children, 2 .wrap) (and 1 more like it: \"Especialidad & Derecho ·\") (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#inicio \"Especialidad & Derecho · CajamarcaDonde \""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div#root > header.fixed.inset-x-0 > a.btn.btn-primario \"Saltar al contenido\"",
+   "msg": "a box runs 16-226px, outside the container lines of the nav at 120-1320px: full width is for background layers and grounds only (SR-6)",
+   "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div#root > header.fixed.inset-x-0 > a.btn.btn-primario \"Saltar al contenido\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.wrap > div.grid.gap-4 > div > p.text-cafe-suave \"Todo lo que ves aquí sale de nuestra bar\"",
+   "msg": "1 text block starts on a left line at x 934, 814px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.wrap > div.grid.gap-4 > div > p.text-cafe-suave \"Todo lo que ves aquí sale de nuestra bar\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.flex.flex-col > ul.mt-6.grid > li.flex.flex-col:nth-of-type(1) > span.tabular-nums.text-salvia \"1\"",
+   "msg": "1 text block starts on a left line at x 769, 649px from the container's left: text starts on the container's left, or on one split line (x 630, 732, 834) (and 2 more like it: x 511, x 150) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.flex.flex-col > ul.mt-6.grid > li.flex.flex-col:nth-of-type(1) > span.tabular-nums.text-salvia \"1\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.wrap > div:nth-of-type(1) > p.mt-6 > a.enlace.font-display \"Av. La Cantuta 1156\"",
+   "msg": "a box over half the container wide runs 120-789px, not on the container's lines at 120-1320px (SR-6)",
+   "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.wrap > div:nth-of-type(1) > p.mt-6 > a.enlace.font-display \"Av. La Cantuta 1156\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#sexto-cafe > div.wrap.grid \"Sentencia del díaCaso cerrado: el sexto \"",
+   "msg": "the two columns of the split start 532px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#sexto-cafe > div.wrap.grid \"Sentencia del díaCaso cerrado: el sexto \""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#talleres > div.wrap > div.grid.gap-4 \"Talleres de arte y bienestarTalleres par\"",
+   "msg": "the two columns of the split start 32px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#talleres > div.wrap > div.grid.gap-4 \"Talleres de arte y bienestarTalleres par\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#galeria > div.wrap > div.grid.gap-4 \"Así se ve un día en Tilca91 publicacione\"",
+   "msg": "the two columns of the split start 20px apart at the top: a split's columns are top-aligned, 8px either way (and 1 more like it: \"Café, jugos, sándwiches \") (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#galeria > div.wrap > div.grid.gap-4 \"Así se ve un día en Tilca91 publicacione\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#carta > div.wrap > div.relative.mt-8 > div.grid.gap-8 \"Grano de especialidad, leche texturizada\"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 936, the first split's at 834; its right column starts at x 936, on none of the split lines 732 (k=6) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#carta > div.wrap > div.relative.mt-8 > div.grid.gap-8 \"Grano de especialidad, leche texturizada\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#inicio > div.wrap.grid \"Especialidad & Derecho · CajamarcaDonde \"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 834, on none of the split lines 732 (k=6) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#inicio > div.wrap.grid \"Especialidad & Derecho · CajamarcaDonde \""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#carta > div.wrap > div.grid.gap-4 \"Café, jugos, sándwiches y postresTodo lo\"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 834, on none of the split lines 732 (k=6) (and 7 more like it: \"Así se ve un día en Tilc\", \"Sentencia del díaCaso ce\", \"Talleres de arte y biene\") (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#carta > div.wrap > div.grid.gap-4 \"Café, jugos, sándwiches y postresTodo lo\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#talleres \"Talleres de arte y bienestar\"",
+   "msg": "pictures, effects and mocks cover 14% of this section; a feature section needs a visual (about 25% or more)",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#talleres \"Talleres de arte y bienestar\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#reservas \"Separa tu mesa para lo que importa\"",
+   "msg": "pictures, effects and mocks cover 13% of this section; a feature section needs a visual (about 25% or more)",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#reservas \"Separa tu mesa para lo que importa\""
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "div.mt-12.grid > article.flex.flex-col > div.mt-6.flex > span.font-display.text-bosque:nth-of-type(1) \"21\"",
+   "msg": "the figure \"21\" is set at 40px, larger than the section headings (h2 35px)",
+   "fix": "set figures at the h2 size or under: a stat reads as data, not as the heading",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "div.mt-12.grid > article.flex.flex-col > div.mt-6.flex > span.font-display.text-bosque:nth-of-type(1) \"21\""
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "section#carta > div.wrap > ul.flex.flex-wrap > li.flex.items-center:nth-of-type(2) \"Café de especialidad\"",
+   "msg": "left edge at 38px, 22px off the page margin at 16px (90 elements, like span.rotate-45.bg-oro)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "section#carta > div.wrap > ul.flex.flex-wrap > li.flex.items-center:nth-of-type(2) \"Café de especialidad\""
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(2) > span.rotate-45.bg-oro",
+   "msg": "left edge at 181.5px, 21.5px off a common edge of its section at 203px (3 elements, like h4.font-display.leading-tight); 4 more in this section off the grid too (li.flex.items-center:nth-of-type(1) at 30px, li.flex.items-center:nth-of-type(2) at 197px, li.flex.items-center:nth-of-type(3) at 30px, li.flex.items-center:nth-of-type(4) at 30px)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div > ul.mt-6.flex > li.flex.items-center:nth-of-type(2) > span.rotate-45.bg-oro"
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#inicio a.btn.btn-secundario \"Ver carta\"",
+   "msg": "starts at x 335.7; the lines are 120 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#inicio a.btn.btn-secundario \"Ver carta\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "#carta section.seccion \"Legalmente deliciosoCafé de espe\"",
+   "msg": "1026px, 1.14 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "#carta section.seccion \"Legalmente deliciosoCafé de espe\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\"",
+   "msg": "919px, 1.02 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "#visitanos section.seccion \"VisítanosAv. La Cantuta 1156Qhap\"",
+   "msg": "853px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "#visitanos section.seccion \"VisítanosAv. La Cantuta 1156Qhap\""
+   ]
+  },
+  {
+   "check": "edge-right",
+   "where": "#talleres a.group.block \"10 octAmigos por siempre\"",
+   "msg": "ends at x 187; the right line is 374",
+   "fix": "end it on the .wrap right line",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-right"
+   ],
+   "wheres": [
+    "#talleres a.group.block \"10 octAmigos por siempre\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#talleres a.group.block \"25 julEl despertar de la monarca\"",
+   "msg": "starts at x 203; the lines are 16 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#talleres a.group.block \"25 julEl despertar de la monarca\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#talleres p.mt-3.text-[1rem] \"25 jul\"",
+   "msg": "starts at x 203; the lines are 16 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#talleres p.mt-3.text-[1rem] \"25 jul\""
+   ]
+  },
+  {
+   "check": "edge-right",
+   "where": "#reservas div.marco.aspect-[4/5]",
+   "msg": "ends at x 187; the right line is 374",
+   "fix": "end it on the .wrap right line",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-right"
+   ],
+   "wheres": [
+    "#reservas div.marco.aspect-[4/5]"
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#reservas div.marco.aspect-[4/5]",
+   "msg": "starts at x 203; the lines are 16 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#reservas div.marco.aspect-[4/5]"
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#carta section.seccion \"Legalmente deliciosoCafé de espe\"",
+   "msg": "framed, 75px of #sexto-cafe section.sobre-bosque.seccion \"Sentencia del díaCaso cerrado: e\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#carta section.seccion \"Legalmente deliciosoCafé de espe\""
+   ]
+  },
+  {
+   "check": "neighbour-ground",
+   "where": "#talleres section.seccion \"Talleres de arte y bienestarTall\"",
+   "msg": "framed, 71px of #reservas section.sobre-bosque.seccion \"Reuniones y celebracionesSepara \"'s ground shows",
+   "fix": "end the ground with the section",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour-ground"
+   ],
+   "wheres": [
+    "#talleres section.seccion \"Talleres de arte y bienestarTall\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\"",
+   "msg": "framed, 54px of #visitanos section.seccion \"VisítanosAv. La Cantuta 1156Qhap\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#equipo section.sobre-bosque.seccion \"Trabaja con nosotrosÚnete al equ\""
+   ]
+  }
+ ],
+ "waived": [
+  {
+   "check": "phone-number",
+   "where": "div:nth-of-type(2) > ul.mt-4 > li.border-b:nth-of-type(1) > a.flex.items-center \"997 677 331\"",
+   "msg": "a phone number after its label: \"997 677 331\"; a visitor can dial it and reach a stranger (and 2 more like it: div:nth-of-type(2) > ul.mt-4 > li.border-b:nth-of-type(2) > a.flex.items-center, div#menu-movil > nav.wrap.flex > div.mt-auto.flex > a.btn.btn-secundario)",
+   "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "phone-number"
+   ],
+   "wheres": [
+    "div:nth-of-type(2) > ul.mt-4 > li.border-b:nth-of-type(1) > a.flex.items-center \"997 677 331\""
+   ],
+   "reason": "El brief pide el WhatsApp real del negocio (+51 997 677 331); la reserva funciona solo con ese número."
+  },
+  {
+   "check": "moment-none",
+   "where": "(the page)",
+   "msg": "a place page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+   "fix": "deal one (moments.mjs pick --page place --photo) and mount it in its own section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "moment-none"
+   ],
+   "wheres": [
+    "(the page)"
+   ],
+   "reason": "Los momentos repartidos (picture-develops, photo-chapters) necesitan fotos grandes; las del cliente son recortes de 240px. El brief define su propio momento: las seis tazas y la balanza en #sexto-cafe."
+  }
+ ],
+ "warnCount": 22,
+ "at": "2026-11-19T23:43:32.761Z",
+ "openTold": true
+}

@@ -1,0 +1,11 @@
+{
+ "page": "dist/index.html",
+ "dir": "/home/user/tilcacafecajamarca",
+ "kind": "place",
+ "start": "2026-11-19T23:21:29.914Z",
+ "by": "start.mjs",
+ "url": null,
+ "root": "dist",
+ "category": "café de especialidad",
+ "primary": "Reservar mesa"
+}

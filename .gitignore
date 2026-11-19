@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-ssr/
+.taste-skill/chrome-*/
+.taste-skill/gate/
+shots/layout/
+shots/r0-*.png
+shots/peor-*.png
+*.log
+shots/tiles/

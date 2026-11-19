@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Tokens ---------- */
+:root {
+  --bosque: #1f3d2b;
+  --crema: #f6f1e7;
+  --crema-2: #ede5d6;
+  --oro: #b8935a;
+  --oro-texto: #7a5c30;
+  --oro-claro: #e2c99f;
+  --cafe: #3b2a20;
+  --cafe-suave: #544739;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* Escala fluida: cuerpo 18px en móvil, 19px en escritorio */
+  --t-body: clamp(1.125rem, 1.08rem + 0.2vw, 1.1875rem);
+  --t-lead: clamp(1.1875rem, 1.1rem + 0.45vw, 1.375rem);
+  --t-h2: clamp(2.125rem, 1.6rem + 2.4vw, 3.5rem);
+  --t-h1: clamp(2.75rem, 1.7rem + 4.8vw, 5.75rem);
+  --t-h3: clamp(1.375rem, 1.25rem + 0.5vw, 1.625rem);
+
+  --gutter: max(16px, env(safe-area-inset-left), env(safe-area-inset-right));
+  --nav-h: 68px;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--nav-h) + 8px);
+    background: var(--crema);
+  }
+  body {
+    @apply bg-crema font-sans text-cafe antialiased;
+    font-size: var(--t-body);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* evita el zoom de iOS al enfocar */
+  }
+  button,
+  a,
+  [role='button'],
+  [role='tab'] {
+    touch-action: manipulation;
+  }
+  button,
+  [role='button'],
+  [role='tab'] {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  :focus-visible {
+    outline: 3px solid var(--oro-texto);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .sobre-bosque :focus-visible {
+    outline-color: var(--oro-claro);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: min(1200px, 100% - 2 * var(--gutter));
+    margin-inline: auto;
+  }
+  @media (min-width: 768px) {
+    .wrap {
+      --gutter: 40px;
+    }
+  }
+
+  .seccion {
+    padding-block: clamp(4.5rem, 3rem + 6vw, 8rem);
+  }
+
+  .etiqueta {
+    @apply font-sans text-[0.9375rem] font-medium uppercase tracking-[0.14em];
+  }
+
+  .h2 {
+    font-size: var(--t-h2);
+    line-height: 1.08;
+  }
+  .lead {
+    font-size: var(--t-lead);
+    line-height: 1.55;
+    max-width: 52ch;
+  }
+
+  /* Botones: un solo sistema, sólido + secundario */
+  .btn {
+    @apply inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full px-7 text-[1.0625rem] font-semibold;
+    transition:
+      transform 160ms var(--ease-out),
+      background-color 200ms ease,
+      color 200ms ease,
+      box-shadow 200ms ease;
+  }
+  .btn:active {
+    transform: scale(0.97);
+  }
+  .btn-primario {
+    @apply bg-bosque text-crema;
+  }
+  .btn-secundario {
+    @apply text-bosque;
+    box-shadow: inset 0 0 0 1.5px var(--bosque);
+  }
+  .sobre-bosque .btn-primario {
+    @apply bg-crema text-bosque;
+  }
+  .sobre-bosque .btn-secundario {
+    @apply text-crema;
+    box-shadow: inset 0 0 0 1.5px var(--crema);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primario:hover {
+      background-color: #2a4f39;
+      transform: translateY(-1px);
+    }
+    .btn-secundario:hover {
+      background-color: rgba(31, 61, 43, 0.07);
+      transform: translateY(-1px);
+    }
+    .sobre-bosque .btn-primario:hover {
+      background-color: #fffaf0;
+    }
+    .sobre-bosque .btn-secundario:hover {
+      background-color: rgba(246, 241, 231, 0.1);
+    }
+    .btn:active {
+      transform: scale(0.97);
+    }
+  }
+  .btn .flecha {
+    transition: transform 200ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover .flecha {
+      transform: translateX(3px);
+    }
+  }
+
+  /* Enlace con subrayado que se dibuja */
+  .enlace {
+    @apply font-medium;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 2px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .enlace {
+      background-size: 0% 1.5px;
+      transition: background-size 250ms var(--ease-out);
+    }
+    .enlace:hover,
+    .enlace:focus-visible {
+      background-size: 100% 1.5px;
+    }
+  }
+
+  /* Fotos: marco fijo, zoom leve dentro del marco al pasar el cursor */
+  .marco {
+    position: relative;
+    overflow: hidden;
+    background: var(--crema-2);
+  }
+  .marco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .marco-zoom:hover img {
+      transform: scale(1.03);
+    }
+  }
+
+  .demo-tag {
+    @apply rounded-sm bg-oro/20 px-1.5 py-px font-sans text-[0.875rem] font-medium text-oro-texto;
+    white-space: nowrap;
+  }
+  .sobre-bosque .demo-tag {
+    @apply bg-oro/25 text-oro-claro;
+  }
+}
+
+/* ---------- Entradas ---------- */
+/* Hero: animación CSS de una sola vez (corre en el compositor mientras carga la página). */
+@keyframes entra {
+  from {
+    opacity: 0;
+    transform: translateY(var(--sube, 14px));
+  }
+}
+@keyframes entra-foto {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+.js [data-entra] {
+  animation: entra 640ms var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+.js [data-entra='foto'] {
+  animation-name: entra-foto;
+  animation-duration: 800ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes entra-suave {
+    from {
+      opacity: 0;
+    }
+  }
+  .js [data-entra],
+  .js [data-entra='foto'] {
+    animation: entra-suave 300ms ease both;
+  }
+  .marco img {
+    transition: none;
+  }
+}
+
+/* Tarjetas crema dentro de secciones verdes recuperan los colores de base */
+.sobre-bosque .sobre-crema .btn-primario {
+  background-color: var(--bosque);
+  color: var(--crema);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sobre-bosque .sobre-crema .btn-primario:hover {
+    background-color: #2a4f39;
+  }
+}
+.sobre-bosque .sobre-crema :focus-visible {
+  outline-color: var(--oro-texto);
+}
