@@ -75,7 +75,7 @@ export const fotos = {
   salon: foto('salon', 'Salón de Tilca Café con lámparas de mimbre y el letrero luminoso al fondo', 1200, 1600),
   tallerTotebags: foto('taller-garfield-familia', 'Madre e hija muestran las totebags que pintaron con Garfield y Oddie', 1179, 1400),
   tallerGarfieldNina: foto('taller-garfield-nina', 'Niña sonriente muestra su totebag pintada con Garfield y Oddie', 1160, 1295),
-  tallerMariposa: foto('taller-mariposa', 'Participante sonriente muestra su pintura de una mariposa monarca', 480, 548),
+  tallerMariposa: foto('taller-monarca', 'Participante sonriente muestra su acuarela de una mariposa monarca', 1179, 1290),
 };
 
 export const hero = {
