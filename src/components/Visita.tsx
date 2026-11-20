@@ -73,7 +73,7 @@ export function Visita() {
               </li>
             </ul>
           </div>
-          <div className="marco aspect-[4/5] md:col-span-4">
+          <div className="marco marco-zoom aspect-[4/5] md:col-span-4">
             <Foto foto={fotos.salon} sizes="(min-width: 768px) 32vw, 100vw" />
           </div>
         </div>

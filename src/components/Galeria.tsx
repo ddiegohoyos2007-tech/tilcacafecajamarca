@@ -17,7 +17,7 @@ export function Galeria() {
               <span className="tabular-nums">{n(negocio.publicaciones)}</span> {negocio.publicaciones === 1 ? 'publicación' : 'publicaciones'} ·{' '}
               <span className="tabular-nums">{n(negocio.seguidores)}</span> {negocio.seguidores === 1 ? 'seguidor' : 'seguidores'}
             </p>
-            <a href={negocio.instagram} target="_blank" rel="noopener" className="enlace mt-2 inline-flex min-h-[44px] items-center gap-2 text-bosque">
+            <a href={negocio.instagram} target="_blank" rel="noopener" className="btn btn-secundario mt-4">
               <Instagram /> Seguir a {negocio.instagramUsuario}
             </a>
           </div>
@@ -26,9 +26,9 @@ export function Galeria() {
         <ul className="mt-12 columns-2 gap-3 sm:gap-6 md:columns-3 lg:columns-4">
           {galeria.fotos.map((f) => (
             <li key={f.src} className="mb-3 break-inside-avoid sm:mb-6">
-              <a href={negocio.instagram} target="_blank" rel="noopener" className="marco marco-zoom block" aria-label={`${f.alt}. Ver más en Instagram`}>
-                <Foto foto={f} sizes="(min-width: 1024px) 24vw, (min-width: 768px) 32vw, 50vw" />
-              </a>
+              <div className="marco marco-zoom">
+                <Foto foto={f} grupo={galeria.fotos} sizes="(min-width: 1024px) 24vw, (min-width: 768px) 32vw, 50vw" />
+              </div>
             </li>
           ))}
         </ul>

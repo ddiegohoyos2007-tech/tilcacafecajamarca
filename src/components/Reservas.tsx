@@ -84,11 +84,11 @@ export function Reservas() {
             </p>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-4 md:gap-6">
-            <div className="marco aspect-[4/5]">
-              <Foto foto={fotos.mesaCompartir} sizes="(min-width: 768px) 22vw, 45vw" />
+            <div className="marco marco-zoom aspect-[4/5]">
+              <Foto foto={fotos.mesaCompartir} grupo={[fotos.mesaCompartir, fotos.clienteSandwich]} sizes="(min-width: 768px) 22vw, 45vw" />
             </div>
-            <div className="marco aspect-[4/5]">
-              <Foto foto={fotos.clienteSandwich} sizes="(min-width: 768px) 22vw, 45vw" />
+            <div className="marco marco-zoom aspect-[4/5]">
+              <Foto foto={fotos.clienteSandwich} grupo={[fotos.mesaCompartir, fotos.clienteSandwich]} sizes="(min-width: 768px) 22vw, 45vw" />
             </div>
           </div>
         </div>

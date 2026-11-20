@@ -13,8 +13,8 @@ export function Oficio() {
         </div>
         <ul className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
           {oficio.fotos.map((f) => (
-            <li key={f.src} className="marco aspect-[3/4] lg:aspect-[2/3]">
-              <Foto foto={f} sizes="(min-width: 768px) 24vw, 50vw" />
+            <li key={f.src} className="marco marco-zoom aspect-[3/4] lg:aspect-[2/3]">
+              <Foto foto={f} grupo={oficio.fotos} sizes="(min-width: 768px) 24vw, 50vw" />
             </li>
           ))}
         </ul>

@@ -1,21 +1,19 @@
-import { talleres, waLink, type Taller } from '../content';
+import { talleres, waLink, type Foto as FotoT, type Taller } from '../content';
 import { Foto } from './Foto';
 import { WhatsApp } from './Iconos';
 
-function TallerFoto({ t }: { t: Taller }) {
+function TallerFoto({ t, grupo }: { t: Taller; grupo: FotoT[] }) {
   if (!t.foto) return null;
   return (
-    <a href={waLink(`Hola Tilca Café, ¿habrá otra edición del taller “${t.titulo}”?`)} target="_blank" rel="noopener" className="group block">
+    <div>
       <div className="marco marco-zoom aspect-[4/5]">
-        <Foto foto={t.foto} sizes="(min-width: 768px) 28vw, 50vw" />
+        <Foto foto={t.foto} grupo={grupo} sizes="(min-width: 768px) 28vw, 50vw" />
       </div>
       <p className="mt-3 text-[1rem] text-cafe-suave">
         {t.fechaCorta.dia} {t.fechaCorta.mes}
       </p>
-      <h4 className="font-display text-[1.25rem] leading-tight text-bosque">
-        <span className="enlace">{t.titulo}</span>
-      </h4>
-    </a>
+      <h4 className="font-display text-[1.25rem] leading-tight text-bosque">{t.titulo}</h4>
+    </div>
   );
 }
 
@@ -70,7 +68,7 @@ export function Talleres() {
             )}
             <div className="mt-5 grid grid-cols-2 gap-4 sm:gap-6">
               {conFoto.map((t) => (
-                <TallerFoto key={t.id} t={t} />
+                <TallerFoto key={t.id} t={t} grupo={conFoto.map((x) => x.foto!)} />
               ))}
             </div>
             <ul className={`mt-8 border-t border-cafe/15 ${sinFoto.length ? '' : 'hidden'}`}>

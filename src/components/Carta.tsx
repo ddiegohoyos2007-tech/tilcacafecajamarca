@@ -2,7 +2,7 @@ import { useId, useRef, useState, type KeyboardEvent } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { carta, mensajes, negocio, precio, waLink } from '../content';
 import { Foto } from './Foto';
-import { Flecha, WhatsApp } from './Iconos';
+import { WhatsApp } from './Iconos';
 import { Franja } from './Hero';
 
 const ease = [0.23, 1, 0.32, 1] as const;
@@ -38,9 +38,6 @@ export function Carta() {
           </h2>
           <div className="md:col-span-5 md:text-right">
             <p className="text-cafe-suave">{carta.bajada}</p>
-            <a href={waLink(mensajes.pedido)} target="_blank" rel="noopener" className="enlace mt-2 inline-flex min-h-[44px] items-center gap-1.5 text-bosque">
-              {carta.cta} <Flecha />
-            </a>
           </div>
         </div>
 
@@ -112,10 +109,7 @@ export function Carta() {
                 ))}
                 {cat.nota && (
                   <p className="mt-6 font-display text-[1.25rem] italic text-bosque">
-                    “{cat.nota}”{' '}
-                    <a href={waLink(mensajes.postres)} target="_blank" rel="noopener" className="enlace whitespace-nowrap font-sans text-[1rem] not-italic">
-                      Preguntar por WhatsApp
-                    </a>
+                    “{cat.nota}”
                   </p>
                 )}
               </div>

@@ -10,10 +10,11 @@ import { Equipo } from './components/Equipo';
 import { Visita } from './components/Visita';
 import { Footer } from './components/Footer';
 import { Interruptor } from './components/Interruptor';
+import { LightboxProvider } from './components/Lightbox';
 
 export default function App() {
   return (
-    <>
+    <LightboxProvider>
       <Nav />
       <main id="contenido" tabIndex={-1} className="outline-none">
         <Hero />
@@ -29,6 +30,6 @@ export default function App() {
       <Footer />
       <BarraMovil />
       <Interruptor />
-    </>
+    </LightboxProvider>
   );
 }

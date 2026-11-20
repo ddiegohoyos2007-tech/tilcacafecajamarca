@@ -28,7 +28,7 @@ export function Equipo() {
           </ul>
         </div>
         <div className="flex flex-col md:col-span-6 md:col-start-7">
-          <div className="marco aspect-[4/3]">
+          <div className="marco marco-zoom aspect-[4/3]">
             <Foto foto={fotos.vaporizador} sizes="(min-width: 768px) 45vw, 100vw" />
           </div>
           <h3 className="mt-8 font-sans text-[1rem] font-semibold uppercase tracking-[0.14em] text-salvia">Ofrecemos</h3>

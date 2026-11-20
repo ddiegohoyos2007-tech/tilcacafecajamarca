@@ -73,7 +73,8 @@ export const fotos = {
   carrotCake: foto('carrot-cake', 'Tajada de carrot cake con cobertura de queso crema'),
   clienteTerraza: foto('cliente-terraza', 'Clienta disfruta un café junto a las plantas del salón'),
   salon: foto('salon', 'Salón de Tilca Café con lámparas de mimbre y el letrero luminoso al fondo', 1200, 1600),
-  tallerTotebags: foto('taller-totebags', 'Madre e hija muestran las totebags que pintaron con Garfield y Oddie', 480, 542),
+  tallerTotebags: foto('taller-garfield-familia', 'Madre e hija muestran las totebags que pintaron con Garfield y Oddie', 1179, 1400),
+  tallerGarfieldNina: foto('taller-garfield-nina', 'Niña sonriente muestra su totebag pintada con Garfield y Oddie', 1160, 1295),
   tallerMariposa: foto('taller-mariposa', 'Participante sonriente muestra su pintura de una mariposa monarca', 480, 548),
 };
 
@@ -318,7 +319,7 @@ export const galeria = {
     fotos.queque,
     fotos.jugosSandwiches,
     fotos.carrotCake,
-    fotos.ensalada,
+    fotos.tallerGarfieldNina,
     fotos.clienteTerraza,
   ],
 };
