@@ -54,7 +54,9 @@ export const fotos = {
   latteCorazon: foto('latte-corazon', 'Latte con corazón de leche en taza de cerámica moteada', 1200, 1600),
   espresso: foto('espresso-extraccion', 'Espresso cayendo desde la máquina a una taza pequeña de cerámica'),
   jugos: foto('jugos-tres', 'Jugos de fresa, verde y naranja con el sello de Tilca, junto a fruta fresca'),
-  bebidaServida: foto('bebida-servida', 'Bebida caliente servida desde una jarrita en taza blanca sobre la mesa'),
+  infusionTaza: foto('infusion-taza', 'Infusión de hierbas en taza de cerámica moteada, con la bolsita filtrante adentro', 1200, 1600),
+  infusionesTrio: foto('infusiones-trio', 'Las tres infusiones naturales servidas en tazas, junto a una tetera de vidrio y una suculenta', 1600, 1200),
+  infusionesMesa: foto('infusiones-mesa', 'Infusiones digestiva, refrescante y relajante en la mesa, con tetera de vidrio al fondo', 1600, 1200),
   sandwich: foto('sandwich-chicharron', 'Pan con chicharrón, camote y salsa de cebolla sobre plato verde, con un jugo al fondo'),
   waffles: foto('waffles-frutas', 'Waffles con mango, arándanos, fresas y crema batida'),
   molino: foto('molino', 'Café recién molido cayendo al portafiltro desde el molino'),
@@ -92,7 +94,7 @@ export const franja = ['Legalmente delicioso', 'Café cajamarquino de especialid
 
 export type Plato = { caso: string; nombre: string; detalle?: string; precio: number };
 export type Grupo = { titulo: string; nota?: string; platos: Plato[] };
-export type Categoria = { id: string; label: string; foto: Foto; grupos: Grupo[]; nota?: string };
+export type Categoria = { id: string; label: string; foto: Foto; extras?: Foto[]; grupos: Grupo[]; nota?: string };
 
 const p = (caso: string, nombre: string, precio: number, detalle?: string): Plato => ({ caso, nombre, precio, detalle });
 
@@ -169,7 +171,8 @@ export const carta = {
     {
       id: 'infusiones',
       label: 'Infusiones',
-      foto: fotos.bebidaServida,
+      foto: fotos.infusionTaza,
+      extras: [fotos.infusionesTrio, fotos.infusionesMesa],
       grupos: [
         {
           titulo: 'Infusiones naturales',

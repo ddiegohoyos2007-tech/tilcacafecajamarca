@@ -107,6 +107,15 @@ export function Carta() {
                     </ul>
                   </div>
                 ))}
+                {cat.extras && (
+                  <ul className="mt-8 grid grid-cols-2 gap-4 md:gap-6">
+                    {cat.extras.map((f) => (
+                      <li key={f.src} className="marco marco-zoom aspect-[4/3]">
+                        <Foto foto={f} grupo={[cat.foto, ...cat.extras!]} sizes="(min-width: 768px) 28vw, 50vw" />
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {cat.nota && (
                   <p className="mt-6 font-display text-[1.25rem] italic text-bosque">
                     “{cat.nota}”
@@ -115,7 +124,7 @@ export function Carta() {
               </div>
               <div className="md:col-span-4 md:col-start-9">
                 <div className="marco marco-zoom aspect-[4/5] md:sticky md:top-[calc(var(--nav-h)+24px)]">
-                  <Foto foto={cat.foto} sizes="(min-width: 768px) 32vw, 100vw" />
+                  <Foto foto={cat.foto} grupo={cat.extras ? [cat.foto, ...cat.extras] : undefined} sizes="(min-width: 768px) 32vw, 100vw" />
                 </div>
               </div>
             </motion.div>
