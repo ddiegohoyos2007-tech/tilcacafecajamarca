@@ -1,7 +1,6 @@
-# Tilca Café: demo web
+# Tilca Café: sitio web
 
-Propuesta conceptual de una página para **Tilca Café** (Av. La Cantuta 1156, Qhapaq Ñan, Cajamarca).
-No es el sitio oficial: lleva `noindex` y un aviso en el footer.
+Página de **Tilca Café** (Av. La Cantuta 1156, Qhapaq Ñan, Cajamarca), con la carta de noviembre de 2026, fotos del cliente y su logo.
 
 Stack: Vite + React 18 + Tailwind 3 + Motion. Página única, prerenderizada a HTML estático (SEO, LCP y lectura sin JS).
 
@@ -25,7 +24,8 @@ Prueba de datos extremos (solo en desarrollo): `http://localhost:5173/?datos=peo
 |---|---|
 | Textos, horario, carta, talleres, requisitos, enlaces de WhatsApp | `src/content.ts` |
 | Colores y tipografías | `tailwind.config.js`, `src/index.css` (`:root`) |
-| Fotos (AVIF + WebP) | `public/img/` |
+| Fotos (AVIF + WebP, 640 y 1280 px) | `public/img/` |
+| Logo, taza y motivo floral | `public/marca/` |
 | SEO, Open Graph y schema.org `CafeOrCoffeeShop` | `index.html` |
 
-Todo lo marcado `[demo]` en la página (o `demo: true` en `content.ts`) está pendiente de confirmar con el cliente.
+Para actualizar precios, edita `carta` en `src/content.ts`: cada plato tiene `caso` (nombre jurídico), `nombre`, `detalle` y `precio`.

@@ -1,6 +1,7 @@
 import { BarraMovil, Nav } from './components/Nav';
 import { Hero } from './components/Hero';
 import { Carta } from './components/Carta';
+import { Oficio } from './components/Oficio';
 import { Fidelidad } from './components/Fidelidad';
 import { Talleres } from './components/Talleres';
 import { Reservas } from './components/Reservas';
@@ -17,6 +18,7 @@ export default function App() {
       <main id="contenido" tabIndex={-1} className="outline-none">
         <Hero />
         <Carta />
+        <Oficio />
         <Fidelidad />
         <Talleres />
         <Reservas />

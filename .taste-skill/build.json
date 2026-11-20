@@ -1,0 +1,11 @@
+{
+ "page": "dist/index.html",
+ "url": null,
+ "root": "dist",
+ "kind": "place",
+ "category": "café de especialidad",
+ "primary": "Reservar mesa",
+ "rounds": 3,
+ "start": "2026-11-20T16:24:44.587Z",
+ "by": "gate.mjs --start"
+}

@@ -5,7 +5,7 @@ import { WhatsApp } from './Iconos';
 export function Marca({ claro = false }: { claro?: boolean }) {
   return (
     <span className="flex items-center gap-3">
-      <img src="/logo-tilca.png" alt="" width={40} height={40} className="h-10 w-10 shrink-0 rounded-full" />
+      <img src={claro ? '/marca/taza-crema.png' : '/marca/taza-oliva.png'} alt="" width={276} height={323} className="h-9 w-auto shrink-0" />
       <span className={`flex items-baseline gap-2 whitespace-nowrap leading-none ${claro ? 'text-crema' : 'text-bosque'}`}>
         <span className="font-display text-[1.375rem] font-medium tracking-[0.22em]">TILCA</span>
         <span className="font-display text-[1rem] italic tracking-wide">Café</span>

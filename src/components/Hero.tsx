@@ -35,7 +35,7 @@ export function Hero() {
     >
       <div className="wrap grid flex-1 content-start gap-6 pb-6 pt-4 md:grid-cols-12 md:content-center md:items-start md:gap-6 md:pb-10 md:pt-10">
         <div className="md:col-span-7">
-          <p className="etiqueta text-oro-texto" data-entra style={{ ['--d' as string]: '0ms' }}>
+          <p className="etiqueta text-[0.8125rem] tracking-[0.1em] text-oro-texto sm:text-[0.9375rem] sm:tracking-[0.14em]" data-entra style={{ ['--d' as string]: '0ms' }}>
             {hero.etiqueta}
           </p>
           <h1
@@ -68,7 +68,7 @@ export function Hero() {
                 <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.8" />
                 <path d="M12 7.5V12l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               </svg>
-              <dd data-assumed>
+              <dd>
                 <span className="font-semibold">{semana.corto}</span> {semana.abre} – {semana.cierra}
                 <br />
                 <span className="font-semibold">{sabado.corto}</span> {sabado.abre} – {sabado.cierra}
@@ -89,8 +89,8 @@ export function Hero() {
         </div>
 
         <div className="md:col-span-5 md:col-start-8" data-entra="foto" style={{ ['--d' as string]: '160ms' }}>
-          <motion.div style={{ y }} className="marco aspect-[2/1] w-full sm:aspect-[16/10] md:aspect-square">
-            <Foto foto={fotos.latteCorazon} prioridad sizes="(min-width: 768px) 40vw, 100vw" />
+          <motion.div style={{ y }} className="marco aspect-[2/1] w-full sm:aspect-[16/10] md:aspect-[4/5]">
+            <Foto foto={fotos.hero} prioridad sizes="(min-width: 768px) 40vw, 100vw" imgClassName="object-[50%_38%]" />
           </motion.div>
         </div>
       </div>

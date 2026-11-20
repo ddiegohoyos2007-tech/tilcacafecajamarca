@@ -23,11 +23,11 @@ export function Galeria() {
           </div>
         </div>
 
-        <ul className="mt-12 columns-2 gap-3 sm:gap-6 md:columns-3">
+        <ul className="mt-12 columns-2 gap-3 sm:gap-6 md:columns-3 lg:columns-4">
           {galeria.fotos.map((f) => (
             <li key={f.src} className="mb-3 break-inside-avoid sm:mb-6">
               <a href={negocio.instagram} target="_blank" rel="noopener" className="marco marco-zoom block" aria-label={`${f.alt}. Ver más en Instagram`}>
-                <Foto foto={f} sizes="(min-width: 768px) 30vw, 50vw" />
+                <Foto foto={f} sizes="(min-width: 1024px) 24vw, (min-width: 768px) 32vw, 50vw" />
               </a>
             </li>
           ))}

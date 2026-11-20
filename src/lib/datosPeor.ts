@@ -9,9 +9,9 @@ export function aplicarPeor() {
   c.negocio.direccion = 'Av. La Cantuta 1156, Mz. B Lt. 12, 2.º piso';
   c.negocio.seguidores = 1;
   c.negocio.publicaciones = 12840;
-  c.carta.categorias[0].platos[0].nombre =
-    'Latte de especialidad con leche de almendras, doble shot y arte en roseta de temporada';
-  c.carta.categorias[2].platos = [];
+  c.carta.categorias[0].grupos[0].platos[0].caso = 'Caprese con jurisprudencia italiana y precedente vinculante';
+  c.carta.categorias[0].grupos[0].platos[0].precio = 1234.5;
+  c.carta.categorias[3].grupos[0].platos = c.carta.categorias[3].grupos[0].platos.slice(0, 1);
   c.talleres.proximo.titulo = 'Acuarela botánica: flores nativas de Cajamarca y del Qhapaq Ñan para principiantes';
   c.talleres.anteriores = c.talleres.anteriores.filter((t) => t.foto).slice(0, 1);
   c.equipo.requisitos[0] =

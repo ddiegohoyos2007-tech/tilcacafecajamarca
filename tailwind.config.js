@@ -5,11 +5,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        bosque: { DEFAULT: '#1F3D2B', 2: '#264A35', 3: '#2E5640' },
+        bosque: { DEFAULT: '#363A1B', 2: '#41461F', 3: '#4A4F24' },
         crema: { DEFAULT: '#F6F1E7', 2: '#EDE5D6', 3: '#E3D8C4' },
         oro: { DEFAULT: '#B8935A', texto: '#7A5C30', claro: '#E2C99F' },
         cafe: { DEFAULT: '#3B2A20', suave: '#544739' },
-        salvia: '#C9D1C7',
+        salvia: '#D6D7B5',
+        sage: '#BBBD91',
       },
       fontFamily: {
         display: ['Fraunces', 'Georgia', 'serif'],

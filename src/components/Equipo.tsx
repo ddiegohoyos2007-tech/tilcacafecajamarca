@@ -29,7 +29,7 @@ export function Equipo() {
         </div>
         <div className="flex flex-col md:col-span-6 md:col-start-7">
           <div className="marco aspect-[4/3]">
-            <Foto foto={fotos.barra} sizes="(min-width: 768px) 45vw, 100vw" />
+            <Foto foto={fotos.vaporizador} sizes="(min-width: 768px) 45vw, 100vw" />
           </div>
           <h3 className="mt-8 font-sans text-[1rem] font-semibold uppercase tracking-[0.14em] text-salvia">Ofrecemos</h3>
           <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">

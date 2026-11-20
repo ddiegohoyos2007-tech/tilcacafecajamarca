@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useReducedMotion, useScroll, useSpring, useTransform, type MotionValue } from 'motion/react';
-import { DEMO, fidelidad } from '../content';
+import { fidelidad } from '../content';
 
 /*
  * Elemento firma: la balanza de Tilca pesa tus cafés.
@@ -39,14 +39,14 @@ function Balanza({ p }: { p: MotionValue<number> }) {
         <circle cx={PIVOTE.x - BRAZO} cy={PIVOTE.y} r="4" fill="currentColor" />
         <circle cx={PIVOTE.x + BRAZO} cy={PIVOTE.y} r="4" fill="currentColor" />
       </motion.g>
-      <circle cx={PIVOTE.x} cy={PIVOTE.y} r="8" fill="#1F3D2B" stroke="currentColor" strokeWidth="3" />
+      <circle cx={PIVOTE.x} cy={PIVOTE.y} r="8" fill="#363A1B" stroke="currentColor" strokeWidth="3" />
       <circle cx={PIVOTE.x} cy={PIVOTE.y - 22} r="5" fill="currentColor" />
 
       {/* izquierda: un grano */}
       <Platillo p={p} lado={-1}>
         <g transform={`translate(${PIVOTE.x} ${PIVOTE.y + 70}) rotate(-25)`}>
           <ellipse rx="11" ry="15" fill="currentColor" />
-          <path d="M0 -13 C-5 -4 5 4 0 13" stroke="#1F3D2B" strokeWidth="2" fill="none" />
+          <path d="M0 -13 C-5 -4 5 4 0 13" stroke="#363A1B" strokeWidth="2" fill="none" />
         </g>
       </Platillo>
       {/* derecha: la taza gratis */}
@@ -123,7 +123,7 @@ export function Fidelidad() {
             ))}
           </ol>
           <p className="mt-6 text-[1rem] text-salvia" style={{ ['--d' as string]: '190ms' }}>
-            Mecánica de la tarjeta por confirmar <span className="demo-tag">{DEMO}</span>
+            {fidelidad.nota}
           </p>
         </div>
 

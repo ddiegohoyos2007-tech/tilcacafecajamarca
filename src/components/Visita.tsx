@@ -1,4 +1,5 @@
-import { DEMO, horario, negocio, visita, waLink, mensajes } from '../content';
+import { fotos, horario, negocio, visita, waLink, mensajes } from '../content';
+import { Foto } from './Foto';
 import { Flecha, Instagram, Pin, Telefono, WhatsApp } from './Iconos';
 
 export function Visita() {
@@ -26,20 +27,14 @@ export function Visita() {
         </div>
 
         <div className="mt-16 grid gap-10 md:grid-cols-12 md:gap-6">
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <h3 className="font-sans text-[1rem] font-semibold uppercase tracking-[0.14em] text-cafe-suave">Horario</h3>
-            <dl className="mt-4 text-[1.1875rem]" data-assumed>
+            <dl className="mt-4 text-[1.1875rem]">
               {horario.map((h) => (
                 <div key={h.dias} className="flex items-baseline justify-between gap-4 border-b border-cafe/15 py-3">
                   <dt className="font-medium">{h.dias}</dt>
                   <dd className="tabular-nums text-cafe">
-                    {h.abre ? (
-                      `${h.abre} – ${h.cierra}`
-                    ) : (
-                      <>
-                        Cerrado <span className="demo-tag">{DEMO}</span>
-                      </>
-                    )}
+                    {h.abre} – {h.cierra}
                   </dd>
                 </div>
               ))}
@@ -49,7 +44,7 @@ export function Visita() {
             </a>
           </div>
 
-          <div className="md:col-span-6 md:col-start-7">
+          <div className="md:col-span-4">
             <h3 className="font-sans text-[1rem] font-semibold uppercase tracking-[0.14em] text-cafe-suave">Contacto</h3>
             <ul className="mt-4 text-[1.1875rem]">
               <li className="border-b border-cafe/15">
@@ -77,6 +72,9 @@ export function Visita() {
                 </a>
               </li>
             </ul>
+          </div>
+          <div className="marco aspect-[4/5] md:col-span-4">
+            <Foto foto={fotos.salon} sizes="(min-width: 768px) 32vw, 100vw" />
           </div>
         </div>
       </div>

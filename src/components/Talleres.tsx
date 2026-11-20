@@ -41,7 +41,7 @@ export function Talleres() {
           <article aria-labelledby="taller-proximo" className="flex flex-col self-start border-t-[3px] border-oro bg-crema-2 p-6 sm:p-10 md:col-span-5">
             <p className="etiqueta text-oro-texto">Próximo taller</p>
             <div className="mt-6 flex items-end gap-4">
-              <span className="font-display text-[2.5rem] leading-[0.85] md:text-[3.25rem] text-bosque tabular-nums">{p.fechaCorta.dia}</span>
+              <span className="font-display text-[2rem] leading-[0.85] md:text-[3.25rem] text-bosque tabular-nums">{p.fechaCorta.dia}</span>
               <span className="pb-1 font-display text-[1.75rem] italic leading-none text-bosque">{p.fechaCorta.mes}</span>
             </div>
             <h3 id="taller-proximo" className="mt-6 text-[var(--t-h3)] leading-tight text-bosque [overflow-wrap:anywhere]">
