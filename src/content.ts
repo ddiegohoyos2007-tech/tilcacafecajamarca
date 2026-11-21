@@ -52,7 +52,7 @@ const foto = (src: string, alt: string, w = 1066, h = 1600): Foto => ({ src, alt
 export const fotos = {
   hero: foto('hero-latte-queque', 'Latte con arte en taza verde junto a una tajada de queque, con plantas al fondo'),
   latteCorazon: foto('latte-corazon', 'Latte con corazón de leche en taza de cerámica moteada', 1200, 1600),
-  espresso: foto('espresso-extraccion', 'Espresso cayendo desde la máquina a una taza pequeña de cerámica'),
+  frappes: foto('frappes', 'Dos frappés de café con crema batida y sorbete amarillo en la barra de Tilca', 1200, 1600),
   jugos: foto('jugos-tres', 'Jugos de fresa, verde y naranja con el sello de Tilca, junto a fruta fresca'),
   infusionTaza: foto('infusion-taza', 'Infusión de hierbas en taza de cerámica moteada, con la bolsita filtrante adentro', 1200, 1600),
   infusionesTrio: foto('infusiones-trio', 'Las tres infusiones naturales servidas en tazas, junto a una tetera de vidrio y una suculenta', 1600, 1200),
@@ -126,7 +126,7 @@ export const carta = {
     {
       id: 'frappes',
       label: 'Frappés',
-      foto: fotos.espresso,
+      foto: fotos.frappes,
       grupos: [
         {
           titulo: 'Frappés con café',
